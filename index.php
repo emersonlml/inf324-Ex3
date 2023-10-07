@@ -37,8 +37,7 @@ echo "Emerson Antonio ibañez Torrez inf-324";
         <?php
           include "conexion.inc.php";
         // Nombre de usuario proporcionado por el formulario de inicio de sesión
-        $tip_us = $_POST["username"];
-    
+            $tip_us = $_SESSION['name']; 
         //vemos el tipo de rol que tiene el usuario
         $resultado=mysqli_query($con,"select rol.tipo_rol   from usuario INNER JOIN rol  on idRol=Rol_idRol where usuario.username='$tip_us'");
 
